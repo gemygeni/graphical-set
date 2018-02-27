@@ -14,18 +14,22 @@
 		087669BD203581F0001C9293 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087669BC203581F0001C9293 /* Set.swift */; };
 		087669BF203581F8001C9293 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087669BE203581F8001C9293 /* Card.swift */; };
 		087669C120358501001C9293 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087669C020358501001C9293 /* Main.storyboard */; };
+		087669C32036B847001C9293 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087669C22036B847001C9293 /* Grid.swift */; };
+		087669C52036F47B001C9293 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087669C42036F47B001C9293 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		087669A720357F75001C9293 /* Graphical Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graphical Set.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		087669AA20357F75001C9293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		087669AC20357F75001C9293 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		087669AA20357F75001C9293 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 4; };
+		087669AC20357F75001C9293 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		087669B120357F75001C9293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		087669B420357F75001C9293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		087669B620357F75001C9293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		087669BC203581F0001C9293 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
-		087669BE203581F8001C9293 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		087669BC203581F0001C9293 /* Set.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; tabWidth = 4; };
+		087669BE203581F8001C9293 /* Card.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; tabWidth = 4; };
 		087669C020358501001C9293 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		087669C22036B847001C9293 /* Grid.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; tabWidth = 4; };
+		087669C42036F47B001C9293 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,9 @@
 				087669A920357F75001C9293 /* Graphical Set */,
 				087669A820357F75001C9293 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		087669A820357F75001C9293 /* Products */ = {
 			isa = PBXGroup;
@@ -62,13 +68,17 @@
 				087669AA20357F75001C9293 /* AppDelegate.swift */,
 				087669BE203581F8001C9293 /* Card.swift */,
 				087669BC203581F0001C9293 /* Set.swift */,
+				087669C22036B847001C9293 /* Grid.swift */,
+				087669C42036F47B001C9293 /* CardView.swift */,
 				087669AC20357F75001C9293 /* ViewController.swift */,
 				087669B120357F75001C9293 /* Assets.xcassets */,
 				087669B320357F75001C9293 /* LaunchScreen.storyboard */,
 				087669C020358501001C9293 /* Main.storyboard */,
 			);
+			indentWidth = 4;
 			path = "Graphical Set";
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 /* End PBXGroup section */
 
@@ -145,6 +155,8 @@
 				087669AD20357F75001C9293 /* ViewController.swift in Sources */,
 				087669AB20357F75001C9293 /* AppDelegate.swift in Sources */,
 				087669BD203581F0001C9293 /* Set.swift in Sources */,
+				087669C32036B847001C9293 /* Grid.swift in Sources */,
+				087669C52036F47B001C9293 /* CardView.swift in Sources */,
 				087669BF203581F8001C9293 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
