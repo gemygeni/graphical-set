@@ -29,13 +29,13 @@ struct Card {
         }
     }
     
-    enum Symbol: Character {
-        case circle = "●"
-        case triangle = "▲"
-        case square = "■"
+    enum Symbol {
+        case diamond
+        case oval
+        case squiggle
         
         static var all: [Symbol] {
-            return [.circle, .triangle, .square]
+            return [.diamond, .oval, .squiggle]
         }
     }
     
