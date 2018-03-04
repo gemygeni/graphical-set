@@ -18,6 +18,18 @@ class CardView: UIView {
     var shading = Card.Shading.open { didSet { setNeedsDisplay() }}
     var symbol = Card.Symbol.diamond { didSet { setNeedsDisplay() }}
     
+    var borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0).cgColor {
+        didSet {
+            layer.borderColor = borderColor
+        }
+    }
+    
+    var borderWidth = CGFloat(0.0) {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
     private lazy var grid = Grid(layout: .dimensions(rowCount: 3, columnCount: 1), frame: bounds)
     
     // MARK: public methods

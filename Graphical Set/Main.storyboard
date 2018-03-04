@@ -41,6 +41,10 @@
                             </stackView>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tL-3I-vOL">
                                 <rect key="frame" x="16" y="84" width="343" height="674"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nJk-qr-ne0" appends="YES" id="DBq-Ez-mcr"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,6 +67,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nJk-qr-ne0">
+                    <connections>
+                        <action selector="handleCardTapWithSender:" destination="BYZ-38-t0r" id="W6I-fw-7ea"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-80.625" y="131.25"/>
         </scene>
