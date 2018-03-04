@@ -48,6 +48,20 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func handleDownSwipe(sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            setGame.dealCards()
+            updateView()
+        }
+    }
+    
+    @IBAction func handleRotation(sender: UIRotationGestureRecognizer) {
+        if sender.state == .ended {
+            setGame.shuffleCardsInPlay()
+            updateView()
+        }
+    }
+    
     // MARK: public functions
     
     override func viewDidLayoutSubviews() {

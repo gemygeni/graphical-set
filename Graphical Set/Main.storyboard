@@ -50,6 +50,8 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="nJk-qr-ne0" appends="YES" id="DBq-Ez-mcr"/>
+                                    <outletCollection property="gestureRecognizers" destination="b6V-XK-bEC" appends="YES" id="8vq-Sv-odu"/>
+                                    <outletCollection property="gestureRecognizers" destination="MWu-g2-eHU" appends="YES" id="GlD-lw-Iw7"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -78,6 +80,16 @@
                         <action selector="handleCardTapWithSender:" destination="BYZ-38-t0r" id="W6I-fw-7ea"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="b6V-XK-bEC">
+                    <connections>
+                        <action selector="handleDownSwipeWithSender:" destination="BYZ-38-t0r" id="FKW-3Q-lbP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <rotationGestureRecognizer id="MWu-g2-eHU">
+                    <connections>
+                        <action selector="handleRotationWithSender:" destination="BYZ-38-t0r" id="XWS-eh-IMD"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-80.625" y="131.25"/>
         </scene>

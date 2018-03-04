@@ -85,6 +85,10 @@ class Set {
         draw(numCards: GameConstant.numInitialCards)
     }
     
+    func shuffleCardsInPlay() {
+        cardsInPlay = shuffle(cardsInPlay)
+    }
+    
     // MARK: private functions
     
     private func initDeck() {
