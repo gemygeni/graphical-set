@@ -39,6 +39,9 @@
                                         <rect key="frame" x="228.66666666666666" y="0.0" width="114.33333333333334" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="New Game"/>
+                                        <connections>
+                                            <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wiI-qY-27x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

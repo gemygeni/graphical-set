@@ -30,6 +30,11 @@ class ViewController: UIViewController {
         updateView()
     }
     
+    @IBAction func newGame(_ sender: UIButton) {
+        setGame.reset()
+        updateView()
+    }
+    
     @IBAction func handleCardTap(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             let location = sender.location(in: cardsInPlayView)
