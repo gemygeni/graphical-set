@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     // MARK: private functions
     
     private func updateView() {
+        updateScoreLabel()
         addCardViewsToGrid()
         addBorders()
         dealButton.isEnabled = setGame.canDealMoreCards()
@@ -108,6 +109,10 @@ class ViewController: UIViewController {
                 cardView.borderWidth = 0.0
             }
         }
+    }
+    
+    private func updateScoreLabel() {
+        scoreLabel.text = "Score: \(setGame.score)"
     }
 }
 
