@@ -16,12 +16,19 @@ class ViewController: UIViewController {
     private lazy var grid = Grid(layout: .aspectRatio(CardSize.aspectRatio),
                                  frame: cardsInPlayView.bounds)
     
-    // MARK: outlets and actions
+    // MARK: outlets
     
     @IBOutlet private var scoreLabel: UILabel!
     @IBOutlet private var dealButton: UIButton!
     @IBOutlet private var newGameButton: UIButton!
     @IBOutlet private var cardsInPlayView: UIView!
+    
+    // MARK: actions
+    
+    @IBAction func dealCards(_ sender: UIButton) {
+        setGame.dealCards()
+        updateView()
+    }
     
     @IBAction func handleCardTap(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
@@ -30,8 +37,7 @@ class ViewController: UIViewController {
             if let tappedView = cardsInPlayView.hitTest(location, with: nil) {
                 if let cardIndex = cardsInPlayView.subviews.index(of: tappedView) {
                     setGame.selectCard(at: cardIndex)
-                    addCardViewsToGrid()
-                    addBorders()
+                    updateView()
                 }
             }
         }
@@ -45,6 +51,11 @@ class ViewController: UIViewController {
     }
     
     // MARK: private functions
+    
+    private func updateView() {
+        addCardViewsToGrid()
+        addBorders()
+    }
     
     private func addCardViewsToGrid() {
         grid.frame = cardsInPlayView.bounds

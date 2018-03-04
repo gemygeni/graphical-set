@@ -31,6 +31,9 @@
                                         <rect key="frame" x="114.33333333333334" y="0.0" width="114.33333333333334" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Deal"/>
+                                        <connections>
+                                            <action selector="dealCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="owH-jb-tI7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-qG-vSs">
                                         <rect key="frame" x="228.66666666666666" y="0.0" width="114.33333333333334" height="36"/>

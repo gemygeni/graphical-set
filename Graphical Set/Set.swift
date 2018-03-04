@@ -23,7 +23,7 @@ class Set {
     
     init() {
         initDeck()
-        draw(numCards: 12)
+        draw(numCards: GameConstant.numInitialCards)
     }
     
     func selectCard(at index: Int) {
@@ -35,7 +35,7 @@ class Set {
             // deselect card if it's already been selected and fewer
             // than 3 cards have been selected
             // else select the card
-            if selectedCards.count < 3 {
+            if selectedCards.count < GameConstant.numCardsPerSet {
                 if let selectedCardIndex = selectedCards.index(of: card) {
                     selectedCards.remove(at: selectedCardIndex)
                 } else {
@@ -46,12 +46,12 @@ class Set {
                 
                 // this block executes when 4th card is selected
                 // (selected card has not yet been added to selectedCard)
-            else if selectedCards.count == 3 {
+            else if selectedCards.count == GameConstant.numCardsPerSet {
                 if checkForMatch() {
-                    draw(numCards: 3)
-                    score += 5
+                    draw(numCards: GameConstant.numCardsPerDeal)
+                    score += GameConstant.matchedSetPoints
                 } else {
-                    score -= 10
+                    score += GameConstant.incorrectSetPenalty
                 }
                 
                 // if the selected card was already matched,
@@ -61,13 +61,13 @@ class Set {
         }
     }
     
-    func dealThreeCards() {
+    func dealCards() {
         if checkForMatch() {
             selectedCards.removeAll()
         }
         
-        draw(numCards: 3)
-        score -= 3
+        draw(numCards: GameConstant.numCardsPerDeal)
+        score += GameConstant.dealCardsPenalty
     }
     
     func reset() {
@@ -78,7 +78,7 @@ class Set {
         score = 0
         
         initDeck()
-        draw(numCards: 12)
+        draw(numCards: GameConstant.numInitialCards)
     }
     
     // MARK: private functions
@@ -101,7 +101,7 @@ class Set {
     }
     
     private func draw(numCards: Int) {
-        if deck.count >= numCards && cardsInPlay.count <= 21 {
+        if deck.count >= numCards {
             for _ in 1...numCards {
                 if let drawnCard = deck.popLast() {
                     cardsInPlay.append(drawnCard)
@@ -131,7 +131,7 @@ class Set {
     
     // return true if selected cards are a set or return false otherwise
     private func selectedCardsAreMatch() -> Bool {
-        if selectedCards.count < 3 {
+        if selectedCards.count < GameConstant.numCardsPerSet {
             return false
         }
         
@@ -164,6 +164,18 @@ class Set {
         }
         
         return true
+    }
+}
+
+extension Set {
+    private struct GameConstant {
+        static let numInitialCards: Int = 12
+        static let numCardsPerDeal: Int = 3
+        static let numCardsPerSet: Int = 3
+        
+        static let dealCardsPenalty: Int = -3
+        static let incorrectSetPenalty: Int = -10
+        static let matchedSetPoints: Int = 5
     }
 }
 
