@@ -60,6 +60,7 @@ class ViewController: UIViewController {
     private func updateView() {
         addCardViewsToGrid()
         addBorders()
+        dealButton.isEnabled = setGame.canDealMoreCards()
     }
     
     private func addCardViewsToGrid() {

@@ -70,6 +70,10 @@ class Set {
         score += GameConstant.dealCardsPenalty
     }
     
+    func canDealMoreCards() -> Bool {
+        return deck.count >= GameConstant.numCardsPerDeal
+    }
+    
     func reset() {
         deck.removeAll()
         cardsInPlay.removeAll()
